@@ -1,0 +1,49 @@
+version: "3"
+
+networks:
+    churchAttendance:
+services:
+    app:
+        build:
+            context: ./docker
+        ports:
+            - "80:80"
+        volumes:
+            - .:/var/www/html
+        networks:
+            - churchAttendance
+
+    mysql:
+        image: mysql:8
+        restart: unless-stopped
+        ports:
+            - "3310:3306"
+        volumes:
+            - ./church_mysql_data:/var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: rootpass
+            MYSQL_DATABASE: db
+
+        networks:
+            - churchAttendance
+
+    phpmyadmin:
+        depends_on:
+            - mysql
+        image: phpmyadmin
+        restart: always
+        ports:
+            - "8092:80"
+        environment:
+            PMA_HOST: mysql
+            PMA_USER: root
+            PMA_PASSWORD: rootpass
+
+        networks:
+            - churchAttendance
+
+    
+
+volumes:
+    church_mysql_data:
+  

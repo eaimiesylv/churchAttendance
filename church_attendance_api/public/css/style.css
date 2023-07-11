@@ -1,0 +1,271 @@
+input[type="file"] {
+		position: absolute; left: -99999rem
+}
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+	background:#01AEFD;
+	color:white;
+	width:60%;	
+	top:50%;
+}
+.custom-file-upload, .custom-file-upload .fa-solid{
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	
+	left: 0;
+	right: 0;
+	text-align: center;
+
+}
+.custom-file-upload .fa-solid{
+	background:white;
+	color:#01AEFD;
+    bottom:1em;
+	font-size:3em;
+	
+							
+							
+}
+.mySlides {
+	display: none;
+  }
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background:#01AEFD;
+  color:white !important;
+}
+
+
+/* Position the "next button" to the right */
+.next {
+  right: -1em;
+  border-radius: 3px 0 0 3px;
+ 
+}
+.prev {
+  left: -1em;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color:white;
+}
+
+ #preview-images {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.preview-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.preview-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+/*
+.preview-image-remove {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  color: white;
+  text-align: center;
+  line-height: 20px;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+}
+*/
+
+
+
+   #msg{
+
+	height:400px;
+	width:50%
+	
+   }
+
+
+   body{
+	   background:#FAFAFA;
+	   display:grid;
+	   grid-template-columns:auto 1fr min-content;
+	   
+   }
+   nav, main,aside{
+	   background:white;
+
+	
+   }
+    nav,aside{
+		padding-top:2em
+	}
+	aside{
+		padding-left:1em;
+		padding-right:1em;
+	}
+	.nav-item{
+			display:flex;
+			align-items:baseline;
+		}
+		.fa-solid{
+			color:blue;
+			font-size:15px;	
+			margin-right:1em;
+		}
+		main {
+		  margin: 0 1em;
+		  display: grid;
+		  grid-template-rows: auto 1fr;
+		  overflow-x: auto;
+		  padding:2em 1em 3em 1em;
+		  
+		}
+		#img_wrapper {
+		  display: flex;
+		   flex-wrap: nowrap;
+		   overflow-x: auto;
+		   overflow-y: hidden;
+		   height:12rem;
+		
+		   
+		   
+		  
+		}
+		#img_wrapper div{
+			width:20%;
+		   height:10rem;
+		   margin-left:1em;
+		   position:relative;
+		  
+		  
+		}
+		#img_wrapper img {
+		 
+		  height:8rem;
+		  width:100%;
+		 
+		}
+		.img{
+			 border-radius:50%;
+			  border:solid black 1px ;
+			  padding:3px;
+			 max-width: 100%;
+		}
+		#img_wrapper p{
+			text-align:center;
+		}
+		#img_wrapper i{
+			position:absolute;
+			right:0.5em;
+			bottom:1.5em;
+			color:white;
+			text-align:center;
+			margin:0 auto;
+			font-size:1.3em;
+			background:#01AEFD;
+			border-radius:50%;
+			padding:0.5em
+		}
+	.hid{
+		display:none
+	}
+	.vis{
+		visibility: hidden;
+	}
+	.search{
+		position:absolute;
+		width:40%;
+		background:white;
+		height:100%;
+		width:30%;
+		left:8em;
+		top:0em;
+		box-shadow: 10px 10px 8px #888888;
+		border-top-right-radius:25px;
+		border-bottom-right-radius:25px;
+		padding:2em;
+	}
+	.mobile{
+		display:none;
+	}
+	
+	@media all and (max-width:900px){
+		body{
+			  grid-template-columns:1fr;
+			  grid-template-rows:min-content 1fr auto;
+			  padding-left:0.2em;
+			  padding-right:0.2em;
+		}
+		.aside,.desktop-li{
+			display:none;
+		}
+		.mobile{
+		display:block;
+		}
+		main{
+			margin:0em
+		}
+		ul{
+			display:flex;
+			justify-content:space-between;
+		}
+		#logo{
+			margin:-2em !important;
+		}
+		#img_wrapper{
+		   margin-top:-2em;
+		   height:9rem;
+		 
+			
+		}
+		#img_wrapper div{
+			width:15%;
+		   height:5rem;
+		   margin-left:1em;
+		 }
+		#img_wrapper img{
+			height:5rem;
+		   width:100%;
+		}
+		.reduce{
+			font-weight:12px;
+		}
+		#img_wrapper i{
+			position:absolute;
+			right:0.5em;
+			bottom:0.7em;
+			font-size:0.8em;
+			background:#01AEFD;
+			padding:0.2em
+		}
+	}
